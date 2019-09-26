@@ -9,10 +9,11 @@ public class TaxiService {
         int total = landingCost + costOfOneKm * km;
         if (total > amountForDiscount) {
             double discountAmount = total / 100.0 * discount;
-            if (discountAmount < maxDiscountAmount)
+            if (discountAmount < maxDiscountAmount) {
                 total -= discountAmount;
-            else
+            } else {
                 total -= maxDiscountAmount;
+            }
         }
         return total;
     }
